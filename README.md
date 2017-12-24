@@ -1,7 +1,7 @@
 <img src="https://github.com/adapta-project/adapta-github-resources/blob/master/images/logo_thumb.png" alt="Logo" align="left" /> Adapta-gtk-theme
 ======
 
-An adaptive Gtk+ theme based on Material Design Guidelines.
+A dark blue version of the beautiful Adapta GTK+ theme 
 
 Before using Adapta
 -------------------
@@ -335,10 +335,9 @@ Work in Progress
 
 TODO
 ----
-* Prepare for Meson build system (priority: high)
-* Prepare for x3 scaling (priority: mid or low)
-* Drop Unity7 support in January 2018 (Xenial -> Bionic).
-* Drop Gtk+ 3.18 support in April 2018 (Xenial -> Bionic).
+* Re-write this README
+* Work on the shell theme
+* Make a unique Adapta-Miami theme instead of Adata(-Nokto)(-Eta)
 
 Public License
 --------------
