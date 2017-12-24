@@ -84,10 +84,10 @@ AC_MSG_RESULT([
 
          prefix:                 ${prefix}
          datarootdir:            ${datarootdir}
-         target directories:     ${datarootdir}/themes/Adapta
-                                 ${datarootdir}/themes/Adapta-Nokto
-                                 ${datarootdir}/themes/Adapta-Eta
-                                 ${datarootdir}/themes/Adapta-Nokto-Eta
+         target directories:     ${datarootdir}/themes/Adapta-Miami
+                                 ${datarootdir}/themes/Adapta-Nokto-Miami
+                                 ${datarootdir}/themes/Adapta-Miami-Eta
+                                 ${datarootdir}/themes/Adapta-Nokto-Miami-Eta
 
          glib-compile-resources: $GLIB_COMPILE_RESOURCES
          inkscape:               $INKSCAPE
