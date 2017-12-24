@@ -1,8 +1,8 @@
 themedir     = $(datadir)/themes
-adaptadir    = $(DESTDIR)$(themedir)/Adapta
-noktodir     = $(DESTDIR)$(themedir)/Adapta-Nokto
-adaptaetadir = $(DESTDIR)$(themedir)/Adapta-Eta
-noktoetadir  = $(DESTDIR)$(themedir)/Adapta-Nokto-Eta
+adaptadir    = $(DESTDIR)$(themedir)/Adapta-Miami
+noktodir     = $(DESTDIR)$(themedir)/Adapta-Nokto-Miami
+adaptaetadir = $(DESTDIR)$(themedir)/Adapta-Miami-Eta
+noktoetadir  = $(DESTDIR)$(themedir)/Adapta-Nokto-Miami-Eta
 
 gtk3_assetdir = $(srcdir)/asset/assets-gtk3
 
