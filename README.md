@@ -1,7 +1,7 @@
 <img src="https://github.com/adapta-project/adapta-github-resources/blob/master/images/logo_thumb.png" alt="Logo" align="left" /> Adapta-gtk-theme
 ======
 
-A dark blue version of the beautiful Adapta GTK+ theme 
+A dark blue version of the beautiful Adapta GTK+ theme
 
 Before using Adapta
 -------------------
@@ -337,7 +337,6 @@ TODO
 ----
 * Re-write this README
 * Work on the shell theme
-* Make a unique Adapta-Miami theme instead of Adata(-Nokto)(-Eta)
 
 Public License
 --------------
