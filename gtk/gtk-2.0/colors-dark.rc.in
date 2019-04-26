@@ -1,7 +1,7 @@
 #
 # Colour scheme
 #
-gtk-color-scheme = "base_color:#29353B\nbg_color:#263238"
+gtk-color-scheme = "base_color:#29353B\nbg_color:#120E29"
 gtk-color-scheme = "text_color:#CFD8DC\nfg_color:#CFD8DC"
 gtk-color-scheme = "selected_bg_color:#00BCD4\nselected_fg_color:#FFFFFF"
 gtk-color-scheme = "tooltip_bg_color:#222D32\ntooltip_fg_color:#CFD8DC"

@@ -4,7 +4,6 @@ assets-gtk2
 assets-gtk3
 assets-gtk2.svg
 assets-gtk3.svg
-gtk-3.18
 gtk-3.20
 gtk-3.20-eta
 gtk-3.22
@@ -13,8 +12,8 @@ gtk-4.0
 gtk-4.0-eta
 gtk.gresource
 _key_colors.scss
-colors.rc
 colors-dark.rc
+colors.rc
 gnome-shell-theme.gresource
 gnome-shell/assets
 gnome-shell-eta/assets
@@ -38,3 +37,5 @@ Makefile
 Makefile.in
 missing
 inkscape.log
+ColorDeck-adapta.cdk
+ColorDeck-adapta-nokto.cdk

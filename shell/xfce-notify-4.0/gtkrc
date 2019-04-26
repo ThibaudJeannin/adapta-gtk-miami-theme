@@ -1,7 +1,7 @@
 #
 # This file is part of adapta-gtk-theme
 #
-# Copyright (C) 2016-2017 Tista <tista.gma500@gmail.com>
+# Copyright (C) 2016-2018 Tista <tista.gma500@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -82,7 +82,7 @@ style "notify-progressbar"
   bg[NORMAL]   = "#F0F2F3"
   bg[SELECTED] = "#F0F2F3"
   bg[ACTIVE]   = "#4DB6AC"
-  fg[PRELIGHT] = "#263238"
+  fg[PRELIGHT] = "#120E29"
 }
 
 class "XfceNotifyWindow"                           style "notify-window"

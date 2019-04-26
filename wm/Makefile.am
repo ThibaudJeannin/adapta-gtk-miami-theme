@@ -9,7 +9,6 @@ metacity_file = \
 	$(metacitydir)/button_close_prelight.svg \
 	$(metacitydir)/button_close_pressed.svg \
 	$(metacitydir)/button_close.svg \
-	$(metacitydir)/button_fill.svg \
 	$(metacitydir)/button_maximize_prelight.svg \
 	$(metacitydir)/button_maximize_pressed.svg \
 	$(metacitydir)/button_maximize.svg \
@@ -116,7 +115,7 @@ openbox_rc_nokto_file = \
 openbox_compton_file = \
 	$(openboxdir)/compton.conf
 
-parallel_option = -0 --no-notice --line-buffer --jobs 100%
+parallel_option = --null --no-notice --line-buffer --jobs 100%
 
 # ***************************************************
 # * Generate PNG images and clone SVG and XBM files *
@@ -140,14 +139,6 @@ if !ENABLE_FLASHBACK
 endif
 endif
 
-if ENABLE_UNITY
-if !ENABLE_FLASHBACK
-	cd $(srcdir)/asset/assets-metacity-scripts && \
-	./clone-assets-metacity.sh && \
-	./render-assets-metacity.sh
-endif
-endif
-
 if ENABLE_MATE
 if !ENABLE_FLASHBACK
 	cd $(srcdir)/asset/assets-metacity-scripts && \
@@ -161,13 +152,15 @@ if ENABLE_PARALLEL
 	cd $(srcdir)/asset/assets-xfwm-scripts && \
 		./recolor-assets-xfwm.sh
 	cd $(srcdir)/asset/assets-xfwm-scripts && \
-	$(PARALLEL) $(parallel_option) bash ::: \
-		render-assets-xfwm-button.sh \
-		render-assets-xfwm-edge.sh \
-		render-assets-xfwm-title.sh
+	$(PARALLEL) $(parallel_option) ./render-assets-xfwm.sh ::: \
+		button1 \
+		button2 \
+		edge \
+		title
 else
 	cd $(srcdir)/asset/assets-xfwm-scripts && \
-		./render-assets-xfwm.sh
+		./recolor-assets-xfwm.sh && \
+		./render-assets-xfwm.sh all
 endif
 endif
 
@@ -191,17 +184,6 @@ if ENABLE_FLASHBACK
 endif
 
 if ENABLE_CINNAMON
-if !ENABLE_FLASHBACK
-	$(MKDIR_P) $(adaptadir)/metacity-1
-	cp -Rv $(metacity_file) $(adaptadir)/metacity-1
-	cd $(adaptadir)
-	ln -sf ../Adapta/metacity-1 $(noktodir)/metacity-1
-	ln -sf ../Adapta/metacity-1 $(adaptaetadir)/metacity-1
-	ln -sf ../Adapta/metacity-1 $(noktoetadir)/metacity-1
-endif
-endif
-
-if ENABLE_UNITY
 if !ENABLE_FLASHBACK
 	$(MKDIR_P) $(adaptadir)/metacity-1
 	cp -Rv $(metacity_file) $(adaptadir)/metacity-1
@@ -261,15 +243,6 @@ if !ENABLE_FLASHBACK
 endif
 endif
 
-if ENABLE_UNITY
-if !ENABLE_FLASHBACK
-	test -e $(noktodir)/metacity-1 && rm -rfv $(noktodir)/metacity-1
-	test -e $(adaptadir)/metacity-1 && rm -rfv $(adaptadir)/metacity-1
-	test -e $(noktoetadir)/metacity-1 && rm -rfv $(noktoetadir)/metacity-1
-	test -e $(adaptaetadir)/metacity-1 && rm -rfv $(adaptaetadir)/metacity-1
-endif
-endif
-
 if ENABLE_MATE
 if !ENABLE_FLASHBACK
 	test -e $(noktodir)/metacity-1 && rm -rfv $(noktodir)/metacity-1
@@ -315,17 +288,6 @@ CLEANFILES += \
 endif
 endif
 
-if ENABLE_UNITY
-if !ENABLE_FLASHBACK
-CLEANFILES += \
-	$(metacitydir)/*.svg \
-	$(metacitydir)/*.png \
-	$(srcdir)/asset/assets-metacity/button_close_pressed.svg \
-	$(srcdir)/asset/assets-metacity/button_close_prelight.svg \
-	$(srcdir)/asset/inkscape.log
-endif
-endif
-
 if ENABLE_MATE
 if !ENABLE_FLASHBACK
 CLEANFILES += \
@@ -342,7 +304,6 @@ CLEANFILES += \
 	$(xfwmdir)/*.png \
 	$(srcdir)/asset/assets-xfwm/close-pressed.svg \
 	$(srcdir)/asset/assets-xfwm/close-prelight.svg \
-	$(srcdir)/asset/assets-xfwm/menu-pressed.svg \
 	$(srcdir)/asset/inkscape.log
 endif
 

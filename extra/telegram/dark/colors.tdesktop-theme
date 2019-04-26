@@ -1,7 +1,7 @@
 //
 // This file is part of adapta-gtk-theme
 //
-// Copyright (C) 2016-2017 Tista <tista.gma500@gmail.com>
+// Copyright (C) 2016-2018 Tista <tista.gma500@gmail.com>
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@ FIXED_SECONDARY_FG_COLOR: #263238DE;            // Dark foreground color in dark
 ACCENT_LABEL_COLOR: #8DCDC8;                    // Action-area foreground color
 2ND_ACCENT_LABEL_COLOR: #8DCDC8DE;              // Secondary action-area foreground color (87%)
 
-BG_COLOR: #263238;                              // Main background color
+BG_COLOR: #120E29;                              // Main background color
 BASE_COLOR: #29353B;                            // Entry/Notebook background color
 SECONDARY_BASE_COLOR: #28343A;                  // Popover/Menu background color
 SECONDARY_DARK_COLOR: #243035;                  // Inline-toolbar background color

@@ -1,6 +1,0 @@
-osd-shadow
-osd-shadow-backdrop
-calendar-day-selected
-thumbnail
-thumbnail-dark
-needs-attention

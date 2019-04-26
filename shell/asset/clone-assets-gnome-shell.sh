@@ -2,7 +2,7 @@
 #
 # This file is part of adapta-gtk-theme
 #
-# Copyright (C) 2016-2017 Tista <tista.gma500@gmail.com>
+# Copyright (C) 2016-2018 Tista <tista.gma500@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -99,23 +99,6 @@ do
             cp -f $SRC_DIR/$s $ASSETS_DARK_DIR/$d/$f
             echo Cloning $ASSETS_DARK_ETA_DIR/$d/$f
             cp -f $SRC_DIR/$s $ASSETS_DARK_ETA_DIR/$d/$f
-        else
-            echo Cloning $ASSETS_DIR/$d/$f
-            cp -f $SRC_DIR/$s $ASSETS_DIR/$d/$f
-            echo Cloning $ASSETS_ETA_DIR/$d/$f
-            cp -f $SRC_DIR/$s $ASSETS_ETA_DIR/$d/$f
-            echo Cloning $ASSETS_DARK_DIR/$d/$f
-            cp -f $SRC_DIR/$s $ASSETS_DARK_DIR/$d/$f
-            echo Cloning $ASSETS_DARK_ETA_DIR/$d/$f
-            cp -f $SRC_DIR/$s $ASSETS_DARK_ETA_DIR/$d/$f
-        fi
-    elif [ $v = "d" ]; then # 'dot'
-        if [ -f $ASSETS_DIR/$d/$f ] && \
-            [ $SRC_DIR/$s -ot $ASSETS_DIR/$d/$f ]; then
-            echo $ASSETS_DIR/$d/$f exists.
-            echo $ASSETS_ETA_DIR/$d/$f exists.
-            echo $ASSETS_DARK_DIR/$d/$f exists.
-            echo $ASSETS_DARK_ETA_DIR/$d/$f exists.
         else
             echo Cloning $ASSETS_DIR/$d/$f
             cp -f $SRC_DIR/$s $ASSETS_DIR/$d/$f
